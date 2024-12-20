@@ -1,50 +1,99 @@
-# React + TypeScript + Vite
+# CodeAnt AI Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CodeAnt AI is a responsive dashboard application built with React, featuring a sidebar navigation for desktop screens and a full-width mobile-friendly layout. The project is designed to demonstrate an intuitive user interface for navigating repositories, AI code reviews, cloud security, and more.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**:
+  - Sidebar navigation for desktops.
+  - Hamburger menu with a full-width overlay for mobile devices.
+  - Seamless content rendering using `react-router-dom`.
 
-## Expanding the ESLint configuration
+- **Dynamic Sidebar**:
+  - Includes navigation links with active state highlighting.
+  - Integration with icons from `react-icons` for an aesthetically pleasing UI.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Page Routing**:
+  - Organized routes using `react-router-dom`.
+  - Separate layouts for desktop and mobile views.
 
-- Configure the top-level `parserOptions` property like this:
+- **Modular Architecture**:
+  - Clean separation of components and routes for maintainability.
+  - State-driven behavior for dynamic components like the mobile menu.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Tech Stack
+
+- **Frontend**:
+  - React.js with TypeScript
+  - TailwindCSS for styling
+  - React Router DOM for routing
+  - React Icons for iconography
+
+- **Development Tools**:
+  - Vite.js for fast development
+  - ESLint and Prettier for code quality
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/RaiDevX8/codeant.git
+   cd codeant
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open the app in your browser at [http://localhost:5173](http://localhost:5173).
+
+## File Structure
+
+```
+codeant-ai-dashboard/
+├── public/               # Public assets
+├── src/
+│   ├── components/       # Reusable components (e.g., Sidebar, HamburgerMenu)
+│   ├── pages/            # Individual page components
+│   ├── App.tsx           # Main app component
+│   ├── main.tsx          # Entry point
+│   ├── styles/           # Tailwind CSS configurations
+│   └── routes/           # Centralized routing logic
+└── package.json          # Project dependencies
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Routes
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+| Route Path         | Component          | Description                |
+|--------------------|--------------------|----------------------------|
+| `/`                | WelcomePage       | Landing page of the app    |
+| `/repositories`    | RepositoriesPage  | View and manage repositories |
+| `/ai-code-review`  | CodeReviewPage    | Perform AI-based code reviews |
+| `/cloud-security`  | CloudSecurityPage | Access cloud security tools |
+| `/how-to-use`      | HowToUsePage      | Guide to using the platform |
+| `/settings`        | SettingsPage      | User settings management   |
+| `/support`         | SupportPage       | Contact support team       |
+| `/logout`          | LogoutPage        | Logout from the application |
+| `*`                | NotFoundPage      | 404 error page             |
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Responsive Design
+
+- **Desktop**: The sidebar is visible, providing easy navigation.
+- **Mobile**: The sidebar is replaced by a hamburger menu, opening a full-width overlay when activated.
+
+
+## Screenshots
+
+| Desktop View                            | Mobile View                              |
+|-----------------------------------------|------------------------------------------|
+|![image](https://github.com/user-attachments/assets/d467af16-c443-4bfa-88a3-7eef0fc5415f)
+ | ![image](https://github.com/user-attachments/assets/2fbd4f44-6548-4543-b444-3dab245e0296)
+ |
+
+
