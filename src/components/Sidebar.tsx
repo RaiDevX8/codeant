@@ -182,7 +182,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
 
       {/* Fullscreen Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full m-3  h-full bg-white z-30 flex flex-col">
+        <div className="md:hidden fixed top-0 left-0 w-full m-3  bg-white z-30 flex flex-col">
           <div className="flex items-center justify-between px-4 py-2 ">
             <div className="flex items-center gap-2">
               <img src={Logo} alt="CodeAnt Logo" className="w-7" />
@@ -209,7 +209,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
               </SelectContent>
             </Select>
           </div>
-          <nav className=" flex-grow h-full">
+          <nav className=" flex-grow ">
             <ul className="text-lg font-semibold">
               <li>
                 <NavLink
