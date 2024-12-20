@@ -26,9 +26,9 @@ const RepositoriesPage = () => {
       <main className="flex-1 w-full h-fit p-6 border border-gray-100 bg-white overflow-y-auto">
         <div className="border border-gray-100 p-6">
           <div className="flex justify-between items-center ">
-            <div>
+            <div className="">
               <h1 className="text-2xl font-semibold">Repositories</h1>
-              <span>{filteredRepositories.length} total repositories</span>
+              <span className="text-gray-400 ">{filteredRepositories.length} total repositories</span>
             </div>
             <div className="flex items-center gap-3">
               <button className="border-black border text-black flex items-center justify-between gap-2 py-2 px-4 rounded-md">
@@ -41,12 +41,12 @@ const RepositoriesPage = () => {
           </div>
 
           {/* Search Bar */}
-          <div className="relative ml-5 gap-10">
+          <div className="relative ml-4 top-3">
             <IoIosSearch className="absolute left-2 w-6 h-6 top-2" />
             <input
               type="text"
               placeholder="Search Repositories"
-              className="w-1/4 border rounded-md py-2 px-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-1/4 border-2 border-gray-300 rounded-md py-2 px-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
