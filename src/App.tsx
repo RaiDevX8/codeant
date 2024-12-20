@@ -5,7 +5,6 @@ import {
   useRoutes,
   Outlet,
 } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
 import RepositoriesPage from "./pages/MainPage";
 import CodeReviewPage from "./pages/CodeReviewPage";
 import CloudSecurityPage from "./pages/CloudSecurityPage";
@@ -15,25 +14,7 @@ import LogoutPage from "./pages/LogoutPage";
 import SupportPage from "./pages/SupportPage";
 import WelcomePage from "./pages/WelcomePage";
 import NotFoundPage from "./pages/HomePage";
-import { useState } from "react";
-
-const SidebarLayout = () => {
-  const [isSidebarOpen, setSidebarOpen] = useState(true);
-
-  return (
-    <div className="flex h-screen flex-col">
-      <Sidebar
-        isOpen={isSidebarOpen}
-        toggleSidebar={() => setSidebarOpen(!isSidebarOpen)}
-      />
-      <div
-        className={`flex-1 ${isSidebarOpen ? "md:ml-64" : "ml-0"} transition-all`}
-      >
-        <Outlet />
-      </div>
-    </div>
-  );
-};
+import SidebarLayout from "./routes/PageLaout";
 const AppRoutes = () => {
   const routes = useRoutes([
     {
