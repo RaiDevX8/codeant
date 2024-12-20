@@ -7,6 +7,7 @@ import GitIcon from "../assets/git.png";
 import BitbucketIcon from "../assets/basket.png";
 import AzureDevOpsIcon from "../assets/asure.png";
 import GitLabIcon from "../assets/fox.png";
+import Side from "../assets/side.png";
 const CodeAntAIPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"SAAS" | "Self Hosted">("SAAS");
 
@@ -31,7 +32,7 @@ const CodeAntAIPage: React.FC = () => {
       {/* Left Section */}
       <div className="hidden md:flex flex-1  items-center justify-center p-6 md:p-8 relative">
         <div className="max-w-md space-y-8">
-          <div className="bg-white w-full  shadow-lg p-6 rounded-[30px]">
+          <div className="bg-white w-full border shadow-lg p-6 rounded-[30px]">
             <div className="flex items-center justify-center gap-2 w-full border-b-2">
               <img src={Logo} alt="logo" className="w-7 pb-3" />
               <h1 className="text-lg w-[315px] font-semibold">
@@ -71,26 +72,33 @@ const CodeAntAIPage: React.FC = () => {
           </div>
         </div>
         <img
-          src={Bottom}
+          src={Side}
           alt="Background Logo"
-          className="absolute bottom-4 left-4 opacity-10 w-56"
+          className="absolute bottom-4 opacity-40 left-4  w-56"
         />
       </div>
 
       {/* Right Section */}
-      <div className="flex-1 flex items-center justify-center   w-full bg-gray-50 h-screen md:p-10 ">
-        <div className=" w-full  h-[600px]  border bg-white  ">
+      <div className="flex-1 flex items-center justify-center w-full bg-gray-50 h-screen md:p-10">
+        <div className="w-full max-w-[750px] h-auto md:h-[550px] shadow border border-gray-300 bg-white rounded p-4 md:p-6">
           {/* Header */}
-          <div className="flex items-center justify-center flex-col md:p-6 ">
-            <div className="text-center mb-8 ">
-              <div className="flex justify-center items-center gap-1 mt-4">
-                <img src={Logo} alt="CodeAnt Logo" className="w-7 mb-4" />
-                <span className="text-2xl text-gray-800">CodeAnt AI</span>
+          <div className="flex items-center justify-center flex-col border-b  border-gray-300 pb-6">
+            <div className="text-center mb-8">
+              {/* Logo and Name Section */}
+              <div className="flex justify-center items-center gap-2 mt-4">
+                <img src={Logo} alt="CodeAnt Logo" className="w-7" />
+                <span className="text-3xl font-normal text-gray-800">
+                  CodeAnt AI
+                </span>
               </div>
-              <h1 className="text-2xl font-bold">Welcome to CodeAnt AI</h1>
+
+              {/* Welcome Text with Margin */}
+              <h1 className="text-3xl font-semibold mt-6">
+                Welcome to CodeAnt AI
+              </h1>
             </div>
 
-            <div className="relative w-full  h-12 border rounded bg-gray-100 flex items-center mb-6 overflow-hidden">
+            <div className="relative w-full h-12 shadow border border-gray-300 rounded bg-gray-100 flex items-center overflow-hidden">
               {/* Background Highlight for Active Tab */}
               <div
                 className={`absolute w-1/2 h-full bg-blue-500 rounded transition-transform duration-300 ${
@@ -118,9 +126,9 @@ const CodeAntAIPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="md:pr-24 md:pl-24">
-            {/* Authentication Buttons */}
-            <div className="space-y-4 ">
+          {/* Authentication Buttons */}
+          <div className="px-5 py-5 ">
+            <div className="space-y-4 md:mt-3 ">
               {(activeTab === "SAAS"
                 ? saasAuthProviders
                 : selfHostedProviders
@@ -134,6 +142,7 @@ const CodeAntAIPage: React.FC = () => {
               ))}
             </div>
           </div>
+
           {/* Footer */}
           <p className="text-sm text-gray-600 mt-8 text-center">
             By signing up, you agree to the{" "}
