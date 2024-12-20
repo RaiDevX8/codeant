@@ -57,12 +57,12 @@ const RepositoriesPage = () => {
         </div>
 
         {/* Repository List */}
-        <div className="w-full h-[calc(100vh-200px)] overflow-y-auto">
+        <div className="w-full  h-[calc(100vh-200px)] overflow-y-auto">
           {/* Render each repository as a card */}
           {filteredRepositories.map((repo) => (
             <div
               key={repo.id}
-              className="flex justify-between  flex-col border w-full border-gray-100 p-4 bg-white rounded-md shadow-md"
+              className="flex justify-between  flex-col border w-full border-gray-200 p-4 bg-gray-50 rounded-md shadow-md"
             >
               {/* Repository details */}
 
