@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import AuthButton from "../components/AuthButton";
 import Logo from "../assets/image.png";
 import Vector from '../assets/vector.png'
-import Bottom from '../assets/side.png'
 import GitIcon from "../assets/git.png";
 import BitbucketIcon from "../assets/basket.png";
 import AzureDevOpsIcon from "../assets/asure.png";
@@ -32,7 +31,7 @@ const CodeAntAIPage: React.FC = () => {
       {/* Left Section */}
       <div className="hidden md:flex flex-1  items-center justify-center p-6 md:p-8 relative">
         <div className="max-w-md space-y-8">
-          <div className="bg-white w-full border shadow-lg p-6 rounded-[30px]">
+          <div className="bg-white w-full border-gray-50 border shadow-lg p-6 rounded-[30px]">
             <div className="flex items-center justify-center gap-2 w-full border-b-2">
               <img src={Logo} alt="logo" className="w-7 pb-3" />
               <h1 className="text-lg w-[315px] font-semibold">

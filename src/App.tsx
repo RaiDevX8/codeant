@@ -15,28 +15,37 @@ import LogoutPage from "./pages/LogoutPage";
 import SupportPage from "./pages/SupportPage";
 import WelcomePage from "./pages/WelcomePage";
 import NotFoundPage from "./pages/HomePage";
+import { useState } from "react";
 
-const SidebarLayout = () => (
-  <div className="flex h-screen ">
-    <Sidebar isOpen={true} toggleSidebar={() => {}} />
-    <div className="flex-1 ml-64 bg-gray-100">
-      <Outlet />
+const SidebarLayout = () => {
+  const [isSidebarOpen, setSidebarOpen] = useState(true);
+
+  return (
+    <div className="flex h-screen flex-col">
+      <Sidebar
+        isOpen={isSidebarOpen}
+        toggleSidebar={() => setSidebarOpen(!isSidebarOpen)}
+      />
+      <div
+        className={`flex-1 ${isSidebarOpen ? "md:ml-64" : "ml-0"} transition-all`}
+      >
+        <Outlet />
+      </div>
     </div>
-  </div>
-);
-
+  );
+};
 const AppRoutes = () => {
   const routes = useRoutes([
     {
       path: "/",
-      element: <WelcomePage />, 
+      element: <WelcomePage />,
     },
     {
       path: "*",
-      element: <NotFoundPage />, 
+      element: <NotFoundPage />,
     },
     {
-      element: <SidebarLayout />, 
+      element: <SidebarLayout />,
       children: [
         { path: "/repositories", element: <RepositoriesPage /> },
         { path: "/ai-code-review", element: <CodeReviewPage /> },

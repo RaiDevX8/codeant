@@ -1,6 +1,5 @@
 import React from "react";
 
-// RepositoryCard.tsx
 interface RepositoryCardProps {
   repo: {
     id: number;
