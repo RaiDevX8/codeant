@@ -37,8 +37,8 @@ CodeAnt AI is a responsive dashboard application built with React, featuring a s
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/codeant-ai-dashboard.git
-   cd codeant-ai-dashboard
+   git clone https://github.com/RaiDevX8/codeant.git
+   cd codeant
    ```
 
 2. Install dependencies:
@@ -87,42 +87,13 @@ codeant-ai-dashboard/
 - **Desktop**: The sidebar is visible, providing easy navigation.
 - **Mobile**: The sidebar is replaced by a hamburger menu, opening a full-width overlay when activated.
 
-## Contribution Guidelines
-
-1. Fork the repository.
-2. Create a feature branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add feature description"
-   ```
-4. Push to your branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a Pull Request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Screenshots
 
 | Desktop View                            | Mobile View                              |
 |-----------------------------------------|------------------------------------------|
-| ![Desktop Sidebar](./screenshots/desktop-sidebar.png) | ![Mobile Menu](./screenshots/mobile-menu.png) |
+|![image](https://github.com/user-attachments/assets/d467af16-c443-4bfa-88a3-7eef0fc5415f)
+ | ![image](https://github.com/user-attachments/assets/2fbd4f44-6548-4543-b444-3dab245e0296)
+ |
 
-## Contact
-
-For questions or suggestions, feel free to reach out:
-
-- **Email**: your.email@example.com
-- **GitHub**: [yourusername](https://github.com/yourusername)
-- **Website**: [charanrai.tech](https://charanrai.tech)
-
----
-
-Thank you for exploring CodeAnt AI!
 
